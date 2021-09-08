@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="learning_management_indexer" view_id="learning_management_indexer" class="Learning\Management\Model\Indexer\Test">
+        <title translate="true">Learning Management Indexer</title>
+        <description translate="true">Learning object of custom indexer</description>
+    </indexer>
+</config>

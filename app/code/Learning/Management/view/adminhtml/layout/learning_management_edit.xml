@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+    <block class="Learning\Management\Block\Edit" name="crud_index_edit" template="Learning_Management::insert.phtml" cacheable="false" />
+        <!-- <uiComponent name="learning_management_form"/> -->
+    </referenceContainer>
+</layout>

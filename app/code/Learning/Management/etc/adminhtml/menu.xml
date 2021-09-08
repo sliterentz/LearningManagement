@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Learning_Management::management" title="LMS" module="Learning_Management" sortOrder="51" resource="Learning_Management::management"/>
+        <add id="Learning_Management::post" title="Manage LMO" module="Learning_Management" sortOrder="10" action="learning_management/post" resource="Learning_Management::post" parent="Learning_Management::management"/>
+        <add id="Learning_Management::hello_configuration" title="Configuration" module="Learning_Management" sortOrder="99" parent="Learning_Management::management" action="adminhtml/system_config/edit/section/management" resource="Learning_Management::helloworld_configuration"/>
+    </menu>
+</config>

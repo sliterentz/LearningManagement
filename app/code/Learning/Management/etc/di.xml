@@ -1,0 +1,29 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="learning_management_post_listing_data_source" xsi:type="string">Learning\Management\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Learning\Management\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">learning_object_product_post</argument>
+            <argument name="resourceModel" xsi:type="string">Learning\Management\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Learning\Management\Controller\Index\Example">
+        <plugin name="Learning_Management_Plugin" type="Learning\Management\Plugin\ExamplePlugin" sortOrder="10" disabled="false"  />
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="exampleSayHello" xsi:type="object">Learning\Management\Console\Sayhello</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>
