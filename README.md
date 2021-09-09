@@ -16,7 +16,7 @@ cp -r ~/LearningManagement/app /path/to/magento2/root/folder
 
 - Step 3: Install & recompile module
 
-```bash
+```console
 php bin/magento setup:upgrade
 php bin/magento module:status
 php bin/magento indexer:reindex
@@ -26,3 +26,8 @@ php bin/magento deploy:mode:set production
 ```
 
 The grid could then be accessed at **LMS** > **Manage LMO**.
+
+![image](https://user-images.githubusercontent.com/950046/132612108-3e49d57d-428d-4144-aab6-df958ec847da.png)
+
+![image](https://user-images.githubusercontent.com/950046/132614551-1c550192-098a-40ad-8144-bc2d7b09272a.png)
+
