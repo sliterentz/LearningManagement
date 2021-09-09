@@ -23,7 +23,7 @@ class Actions extends Column
         ContextInterface $context,
         UiComponentFactory $uiComponentFactory,
         Url $urlBuilder,
-        $viewUrl = '',
+        $viewUrl = 'edit',
         array $components = [],
         array $data = []
     ) {
@@ -43,13 +43,21 @@ class Actions extends Column
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
                 $name = $this->getData('title');
-                if (isset($item['entity_id'])) {
+                if (isset($item['post_id'])) {
                     $item[$name]['view']   = [
-                        'href'  => $this->_urlBuilder->getUrl($this->_viewUrl, ['id' => $item['entity_id']]),
+                        'href'  => $this->_urlBuilder->getUrl($this->_viewUrl, ['id' => $item['post_id']]),
                         'target' => '_blank',
                         'label' => __('View on Frontend')
                     ];
                 }
+                $item[$this->getData('name')]['edit'] = [
+                    'href' => $this->_urlBuilder->getUrl(
+                        'admin/learning_management/post/edit',
+                        ['id' => $item['post_id']]
+                    ),
+                    'label' => __('Edit'),
+                    'hidden' => false,
+                ];
             }
         }
 

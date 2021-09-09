@@ -26,4 +26,11 @@
         </arguments>
     </type>
 
+    <type name="Learning\Management\Ui\Component\Listing\Columns\Actions">
+        <plugin name="prepare_data_source_after" type="Learning\Management\Plugin\Adminhtml\LmsActions"/>
+    </type>
+
+    <preference for="Learning\Management\Api\LmoRepositoryInterface" type="Learning\Management\Api\Model\LmoRepository"/>
+    <preference for="Learning\Management\Api\RequestLmoInterface" type="Learning\Management\Api\Model\RequestLmo" />
+    <preference for="Learning\Management\Api\ResponseLmoInterface" type="Learning\Management\Api\Model\ResponseLmo" />
 </config>

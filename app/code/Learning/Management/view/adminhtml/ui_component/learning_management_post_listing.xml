@@ -9,7 +9,7 @@
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
-                <item name="label" xsi:type="string" translate="true">Add New Post</item>
+                <item name="label" xsi:type="string" translate="true">Add New LO</item>
                 <item name="class" xsi:type="string">primary</item>
                 <item name="url" xsi:type="string">learning_management/post/insert</item>
             </item>
@@ -66,6 +66,18 @@
         <paging name="listing_paging"/>
     </listingToolbar>
     <columns name="learning_management_post_columns">
+        <settings>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">learning_management_post_listing.learning_management_post_listing.learning_management_post_columns.actions</item>
+                    <item name="target" xsi:type="string">applyAction</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">edit</item>
+                        <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -147,7 +159,12 @@
             </argument>
         </column> -->
     <actionsColumn name="actions" class="Learning\Management\Ui\Component\Listing\Column\Actions" sortOrder="200">
-          <!-- <indexField>entity_id</indexField> -->
+           <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                    <item name="sortOrder" xsi:type="number">200</item>
+                </item>
+            </argument>
     </actionsColumn>
     </columns>
 </listing>

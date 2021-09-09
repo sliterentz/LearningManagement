@@ -4,6 +4,7 @@
         <sequence>
             <module name="Magento_Backend"/> 
             <module name="Magento_Ui"/>
+            <module name="Magento_Webapi" />
         </sequence>
     </module>
 </config>

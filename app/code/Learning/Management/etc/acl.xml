@@ -3,9 +3,10 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Learning_Management::management" title="Learning Object" sortOrder="51">
-                    <resource id="Learning_Management::post" title="Posts" sortOrder="10"/>
-                    <resource id="Learning_Management::helloworld_configuration" title="Configuration" sortOrder="99" />
+                    <resource id="Learning_Management::management" title="Learning Object API" translate="title" sortOrder="51">
+                    <resource id="Learning_Management::post" title="Learning Object List" translate="title" sortOrder="10"/>
+                    <resource id="Learning_Management::getpost" title="View Learning Object" translate="title" sortOrder="30"/>
+                    <resource id="Learning_Management::helloworld_configuration" title="Configuration" translate="title" sortOrder="99" />
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
